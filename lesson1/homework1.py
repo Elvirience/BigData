@@ -1,5 +1,5 @@
 """
-Выполнил: Агеев Георгий (BigData 1795)
+Выполнил: Агеев Георгий (AI 1781)
 """
 """
 Индекс в названии функции соответствует номеру задания
@@ -14,9 +14,9 @@ def num1():
     b = 1
     c = 1.7
     print(f'a = {a}, b = {b}, c = {c}')
-    a = input(f'a = ')
-    b = input(f'b = ')
-    c = input(f'c = ')
+    a = input('a = ')
+    b = input('b = ')
+    c = input('c = ')
     print(f'a = {a}, b = {b}, c = {c}')
 
 
@@ -30,8 +30,8 @@ def num2():
 
 def num3():
     n = input('Введите число: ')
-    nn = str(n+n)
-    nnn = str(n+n+n)
+    nn = n+n
+    nnn = n+n+n
     a = int(n)
     b = int(nn)
     c = int(nnn)
@@ -95,4 +95,3 @@ while answer != 'n':
                 num6()
             else:
                 print('Некорректный ввод')
-
