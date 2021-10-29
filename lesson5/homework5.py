@@ -1,9 +1,10 @@
 """
 Агеев Георгий BigData 1795
 """
-"""
-Добавлю 7-ую
-"""
+
+import json
+
+
 def num1():
     fin = open('ex1.txt', 'w', encoding='UTF-8')
     data = input('Введите данные для записи в файл или пустую строку: ')
