@@ -54,3 +54,19 @@ def num5(i=0, sum=0):
         for i in fin.readline().split():
             sum += int(i)
         print(sum)
+
+        
+def num6(result_dict={}):
+    with open('ex6.txt', encoding='UTF - 8') as fout:
+        for line in fout:
+            line = line.split()
+            sum = 0
+            for i in line:
+                try:
+                    i = i.split('(')
+                    sum += int(i[0])
+                except ValueError:
+                    pass
+            unit_dict = {line[0][:-1]: {sum}}
+            result_dict.update(unit_dict)
+        print(result_dict)
