@@ -67,7 +67,11 @@ def num5(i=0, sum=0):
 
 
 def num6(result_dict={}):
+<<<<<<< HEAD
     with open('ex6.txt', encoding='UTF - 8') as fout:
+=======
+    with open('ex6.txt', encoding='UTF-8') as fout:
+>>>>>>> 3adc0218a9cd7f8a7c5930cff50b5d51069d37bb
         for line in fout:
             line = line.split()
             sum = 0
