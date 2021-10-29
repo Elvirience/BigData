@@ -33,7 +33,6 @@ def num3(i=0, count=0):
         print(f'Средняя величина дохода: {int(i/count)}')
 
 
-
 def num4(i=0):
     fout = open('ex4.txt', encoding='UTF-8')
     fin = open('ex4_in.txt', 'w', encoding='UTF-8')
@@ -72,7 +71,7 @@ def num6(result_dict={}):
         print(result_dict)
 
         
-        """
+"""
 main():
 """
 q = ' '
