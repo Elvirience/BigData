@@ -1,7 +1,9 @@
 """
 Агеев Георгий BigData 1795
 """
-
+"""
+Добавлю две задачи и опишу 5-ую
+"""
 import json
 
 
@@ -31,7 +33,7 @@ def num3(i=0, count=0):
             if int(salary) < 20000:
                 print(surname)
             count += 1
-        print(f'Средняя величина дохода: {int(i/count)}')
+        print(f'Средняя величина дохода: {int(i / count)}')
 
 
 def num4(i=0):
@@ -57,28 +59,42 @@ def num5(i=0, sum=0):
 
 
 """
-Успел сделать только топорный вариант в рамках заполнения файла, как в примере.
+Успел сделать топорный вариант в рамках заполнения файла, как в примере.
 В адекватном решении использовал бы read() + seek()
  для чтения файловой строки поэлементно. 
 Если за попавшимся int тоже следует int, 
- то конкотенирую строковые числа и, если далее следует не цифра, то делаю их интом int(str+str)
+ то конкотенирую строковые числа и если далее следует не цифра, то делаю их интом int(str+str)
 """
+
+
 def num6(result_dict={}):
     with open('ex6.txt', encoding='UTF - 8') as fout:
         for line in fout:
             line = line.split()
             sum = 0
+            """
+            Разбил строку на слова без пробелов
+            """
             for i in line:
+                """
+                Каждое слово делю на две части по "("
+                Для названия предмета, которое всегда стоит первым элементом в списке,
+                 а так же для случаев, когда стоит прочерк, описываю try - except:
+                """
                 try:
                     i = i.split('(')
                     sum += int(i[0])
                 except ValueError:
                     pass
+                """
+                line[0] - первый элемент каждой строки в файле - название предмета
+                После названия предмета следует ":", поэтому делаю срез строки
+                """
             unit_dict = {line[0][:-1]: {sum}}
             result_dict.update(unit_dict)
         print(result_dict)
 
-        
+
 def num7(all_profit=0, count=0, firm_dict={}):
     with open('ex7.txt', encoding='UTF - 8') as fout:
         for line in fout:
@@ -96,10 +112,10 @@ def num7(all_profit=0, count=0, firm_dict={}):
     """
     json
     """
-    with open('ex7.json','w' ,encoding='UTF - 8') as fin:
+    with open('ex7.json', 'w', encoding='UTF - 8') as fin:
         fin.write(json.dumps(my_list))
-     
-    
+
+
 """
 main():
 """
