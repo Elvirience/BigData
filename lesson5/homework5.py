@@ -70,3 +70,23 @@ def num6(result_dict={}):
             unit_dict = {line[0][:-1]: {sum}}
             result_dict.update(unit_dict)
         print(result_dict)
+
+        
+        """
+main():
+"""
+q = ' '
+while q != '':
+    q = input('Введите номер задания или нажмите ENTER: ')
+    if q == '1':
+        num1()
+    elif q == '2':
+        num2()
+    elif q == '3':
+        num3()
+    elif q == '4':
+        num4()
+    elif q == '5':
+        num5()
+    elif q == '6':
+        num6()
