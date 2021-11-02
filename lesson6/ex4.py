@@ -97,7 +97,3 @@ print('для PoliceCar')
 police = PoliceCar(180, "Black", "Audi", False)
 police.call_centre()
 police.show_speed(140)
-
-
-
-
