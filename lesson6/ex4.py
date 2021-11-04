@@ -7,13 +7,13 @@ class Car:
         self.is_police = is_police
 
     def go(self):
-        print(f'{name} едет')
+        print(f'{self.name} едет')
 
     def stop(self):
-        print(f'{name} остановилась')
+        print(f'{self.name} остановилась')
 
     def turn(self, direction):
-        print(f'{name} поворачивает на{direction}')
+        print(f'{self.name} поворачивает на{direction}')
 
     def show_speed(self):
         print(f'Текущая скорость: {self.speed}')
@@ -97,3 +97,7 @@ print('для PoliceCar')
 police = PoliceCar(180, "Black", "Audi", False)
 police.call_centre()
 police.show_speed(140)
+
+car0 = Car(180, "Red", "BMW", False)
+car0.go()
+car0.turn("право")
