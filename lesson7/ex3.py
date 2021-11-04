@@ -24,6 +24,24 @@ class Cell:
         return new_cell
 
     def make_order(self, row):
-        my_list = []
-        for i in range(row):
-
+        my_matrix = []
+        a = self.quantitiy % row
+        if a == 0:
+            for i in range(self.quantitiy / row):
+                my_list = []
+                for j in range(row):
+                    my_list.append('*')
+                my_matrix.append(''.join(my_list))
+            '/n'.join(my_matrix)
+        else:
+            for i in range(self.quantitiy / row):
+                my_list = []
+                for j in range(row):
+                    my_list.append('*')
+                my_matrix.append(''.join(my_list))
+            my_list = []
+            for el in range(a):
+                my_list.append('*')
+            my_matrix.append(''.join(my_list))
+            '/n'.join(my_matrix)
+            
