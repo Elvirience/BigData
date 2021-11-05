@@ -27,14 +27,14 @@ class Cell:
         my_matrix = []
         a = self.quantitiy % row
         if a == 0:
-            for i in range(self.quantitiy / row):
+            for i in range(self.quantitiy // row):
                 my_list = []
                 for j in range(row):
                     my_list.append('*')
                 my_matrix.append(''.join(my_list))
-            '/n'.join(my_matrix)
+            return '/n'.join(my_matrix)
         else:
-            for i in range(self.quantitiy / row):
+            for i in range(self.quantitiy // row):
                 my_list = []
                 for j in range(row):
                     my_list.append('*')
@@ -43,5 +43,8 @@ class Cell:
             for el in range(a):
                 my_list.append('*')
             my_matrix.append(''.join(my_list))
-            '/n'.join(my_matrix)
-            
+            return '/n'.join(my_matrix)
+
+
+a = Cell(40)
+print(a.make_order(6))
