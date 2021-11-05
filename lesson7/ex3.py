@@ -32,7 +32,7 @@ class Cell:
                 for j in range(row):
                     my_list.append('*')
                 my_matrix.append(''.join(my_list))
-            return '/n'.join(my_matrix)
+            return '\n'.join(my_matrix)
         else:
             for i in range(self.quantitiy // row):
                 my_list = []
@@ -43,7 +43,7 @@ class Cell:
             for el in range(a):
                 my_list.append('*')
             my_matrix.append(''.join(my_list))
-            return '/n'.join(my_matrix)
+            return '\n'.join(my_matrix)
 
 
 a = Cell(40)
